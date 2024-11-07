@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 let ViewSkills = document.getElementById("toggle-btn");
 let condition = false;
 ViewSkills.addEventListener("click", () => {
