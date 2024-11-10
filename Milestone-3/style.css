@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 30px;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 50px 20px;
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #323b4c;
+  color: lavender;
+  border-radius: 10px;
+}
+
+#resume-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.headings {
+  text-align: center;
+}
+
+.form-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sections {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+  border: 1px solid lavender;
+  border-radius: 5px;
+  transition: 2s, ease-in;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.transition {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 1.5s ease, opacity 1.5s ease;
+}
+
+.transition.visible {
+  height: auto;
+  opacity: 1;
+}
+
+.input {
+  padding: 0.5rem;
+  outline: none;
+  border-radius: 3px;
+  border: 0.1rem solid gray;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.add-remove-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#preview {
+  width: 100%;
+  padding: 1rem;
+  max-width: 900px;
+  border: 1px solid black;
+}
+
+#prev-grid {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  font-family: "Manrope", "Poppins", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+}
+
+#grid-sec-one {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #323b4c;
+  color: lavender;
+}
+
+#pfpandname {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pfp-prev {
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 1px solid white;
+  height: 200px;
+  width: 200px;
+}
+
+#name-prev {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+#grid-sec-two {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-between;
+  background-color: lavender;
+}
+
+.resume-headings-one {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  font-size: 1.3rem;
+  padding: 5px 0 5px 0;
+  border-bottom: 1px solid white;
+  font-weight: 500;
+}
+
+.resume-headings-two{
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  font-size: 1.3rem;
+  padding: 5px 0 5px 0;
+  border-bottom: 1px solid #323b4c;
+  font-weight: 500;
+  color: #323b4c;
+}
+
+.resume-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.prev-sec{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#skill-list,
+#lang-list {
+  list-style: none;
+}
+
+.word-wrap-one {
+  word-wrap: break-word;
+}
+
+.word-wrap-two{
+  word-break: break-all;
+}
+
+#download-btn{
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #323b4c;
+  transition: 1s;
+  color: #323b4c;
+  background-color: lavender;
+}
+
+#download-btn:hover{
+  background-color: #323b4c;
+  color: lavender;
+  cursor: pointer;
+}
+
+@keyframes Div-transition {
+  25% {
+    opacity: 25%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75% {
+    opacity: 75%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .sections {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #prev-grid {
+    grid-template-columns: 1fr;
+  }
+}
