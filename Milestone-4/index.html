@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-headings no-print">Resume Builder</h1>
+    <section class="container no-print">
+      <form id="resume-form">
+        <div class="form-sections">
+          <h2 class="headings">Personal Info</h2>
+          <div class="sections" id="personal-info">
+            <div class="input-container">
+              <label for="first-name">First Name</label>
+              <input
+                onkeyup="updateResume()"
+                class="input"
+                type="text"
+                placeholder="First Name"
+                id="first-name"
+                maxlength="25"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="middle-name">Middle Name</label>
+              <input
+                onkeyup="updateResume()"
+                class="input"
+                type="text"
+                placeholder="Middle Name"
+                id="middle-name"
+                maxlength="25"
+              />
+            </div>
+            <div class="input-container">
+              <label for="last-name">Last Name</label>
+              <input
+                onkeyup="updateResume()"
+                class="input"
+                type="text"
+                placeholder="Last Name"
+                id="last-name"
+                maxlength="25"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="email">Email</label>
+              <input
+                onkeyup="updateResume()"
+                class="input"
+                type="email"
+                placeholder="Email"
+                id="email"
+                maxlength="40"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="phone-number">Phone Number</label>
+              <input
+                onkeyup="updateResume()"
+                class="input"
+                type="number"
+                placeholder="Phone Number"
+                id="phone-number"
+                maxlength="15"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="pfp">Profile Picture</label>
+              <input
+                type="file"
+                accept="image/*"
+                class="input"
+                id="pfp"
+                required
+                onchange="updatePfp()"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-sections" id="edu-sec">
+          <h2 class="headings">Education</h2>
+          <div class="sections">
+            <div class="input-container">
+              <label for="school">School</label>
+              <input
+                onkeyup="updateResume()"
+                class="input school"
+                type="text"
+                placeholder="School Name"
+                maxlength="100"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="degree">Degree</label>
+              <input
+                onkeyup="updateResume()"
+                class="input degree"
+                type="text"
+                placeholder="Degree"
+                maxlength="100"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="location">Location</label>
+              <input
+                onkeyup="updateResume()"
+                class="input location-edu"
+                type="text"
+                placeholder="Location"
+                maxlength="100"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="starting-date">Start Date</label>
+              <input
+                onkeyup="updateResume()"
+                class="input starting-date-edu"
+                type="date"
+                placeholder="Starting-date"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="ending-date">Ending Date</label>
+              <input
+                onkeyup="updateResume()"
+                class="input ending-date-edu"
+                type="date"
+                placeholder="Ending Date"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="brief-description-education">Brief Description</label>
+              <input
+                onkeyup="updateResume()"
+                type="text"
+                class="input brief-description-education"
+                placeholder="Description"
+                maxlength="100"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="add-remove-div">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+            id="add-education"
+          >
+            <path
+              d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+            />
+          </svg>
+        </div>
+        <div class="form-sections" id="work-sec">
+          <h2 class="headings">Work Experience</h2>
+          <div class="sections">
+            <div class="input-container">
+              <label for="title">Job Title</label>
+              <input
+                onkeyup="updateResume()"
+                class="input work-title"
+                type="text"
+                placeholder="Title"
+                maxlength="100"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="organization">Company / Organization</label>
+              <input
+                onkeyup="updateResume()"
+                class="input work-organization"
+                type="text"
+                placeholder="Company Name"
+                maxlength="100"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="country">Location</label>
+              <input
+                onkeyup="updateResume()"
+                class="input location-work"
+                type="text"
+                placeholder="Location"
+                maxlength="100"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="starting-date">Start Date</label>
+              <input
+                onkeyup="updateResume()"
+                class="input starting-date-work"
+                type="date"
+                placeholder="Starting-date"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="ending-date">Ending Date</label>
+              <input
+                onkeyup="updateResume()"
+                class="input ending-date-work"
+                type="date"
+                placeholder="Ending Date"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="brief-description-work">Brief Description</label>
+              <input
+                onkeyup="updateResume()"
+                type="text"
+                class="input brief-description-work"
+                placeholder="Description"
+                maxlength="100"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="add-remove-div">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+            id="add-work"
+          >
+            <path
+              d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+            />
+          </svg>
+        </div>
+        <div class="form-sections">
+          <h2 class="headings">Skills</h2>
+          <div class="sections" id="skills-sec">
+            <div class="input-container">
+              <label for="skills">Skills</label>
+              <input
+                onkeyup="updateResume()"
+                type="text"
+                id="skills"
+                class="input"
+                placeholder="Skills (Comma-seperated)"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-sections" id="projects-sec">
+          <h2 class="headings">Projects</h2>
+          <div class="sections">
+            <div class="input-container">
+              <label for="title">Project Name</label>
+              <input
+                onkeyup="updateResume()"
+                class="input project-title"
+                type="text"
+                placeholder="Title"
+                maxlength="100"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="organization">Project URL</label>
+              <input
+                onkeyup="updateResume()"
+                class="input project-url"
+                type="text"
+                placeholder="Company Name"
+                maxlength="100"
+                required
+              />
+            </div>
+            <div class="input-container">
+              <label for="brief-description">Brief Description</label>
+              <input
+                onkeyup="updateResume()"
+                class="input brief-description-project"
+                type="text"
+                placeholder="Description"
+                maxlength="100"
+                required
+              />
+            </div>
+          </div>
+        </div>
+        <div class="add-remove-div">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#e8eaed"
+            id="add-project"
+          >
+            <path
+              d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z"
+            />
+          </svg>
+        </div>
+        <div class="form-sections">
+          <h2 class="headings">Languages</h2>
+          <div class="sections" id="language-sec">
+            <div class="input-container">
+              <label for="languages">Language</label>
+              <input
+                onkeyup="updateResume()"
+                type="text"
+                class="input"
+                id="languages"
+                placeholder="Languages you Speak (Comma-seperated)"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <h1 class="main-headings no-print">Preview</h1>
+    <section id="preview">
+      <div id="prev-grid">
+        <div id="grid-sec-one">
+          <div id="pfpandname">
+            <div id="pfp-prev"></div>
+            <span
+              id="name-prev"
+              class="word-wrap-one"
+              contenteditable="true"
+            ></span>
+          </div>
+          <div class="resume-sections">
+            <span class="resume-headings-one">Personal Info</span>
+            <label for="">Email:</label>
+            <span
+              id="email-prev"
+              class="word-wrap-two"
+              contenteditable="true"
+            ></span>
+            <label for="">Phone Number:</label>
+            <span
+              id="pn-prev"
+              class="word-wrap-two"
+              contenteditable="true"
+            ></span>
+          </div>
+          <div class="resume-sections">
+            <span class="resume-headings-one">Skills</span>
+            <ul id="skill-list" contenteditable="true"></ul>
+          </div>
+          <div class="resume-sections">
+            <span class="resume-headings-one">Languages</span>
+            <ul id="lang-list" contenteditable="true"></ul>
+          </div>
+        </div>
+        <div id="grid-sec-two">
+          <div class="resume-sections">
+            <span class="resume-headings-two">Education</span>
+            <div
+              id="edu-prev"
+              class="prev-sec word-wrap-two"
+              contenteditable="true"
+            ></div>
+          </div>
+          <div class="resume-sections">
+            <span class="resume-headings-two">Work Experience</span>
+            <div
+              id="work-prev"
+              class="prev-sec word-wrap-two"
+              contenteditable="true"
+            ></div>
+          </div>
+          <div class="resume-sections">
+            <span class="resume-headings-two">Projects</span>
+            <div
+              id="proj-prev"
+              class="prev-sec word-wrap-two"
+              contenteditable="true"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <button id="download-btn" class="no-print" onclick="DownloadResume()">
+      Download
+    </button>
+    <script src="script.js"></script>
+  </body>
+</html>
