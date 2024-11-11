@@ -274,8 +274,6 @@ function updateResume() {
         projPrev.appendChild(addedProject);
     }
 }
-// Dynamic Loader
-setInterval(updateResume, 1000);
 //trying to make a download buttton
 function DownloadResume() {
     window.print();

@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dynamic Resume Builder</title>
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-    <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
   </head>
   <body>
     <h1 class="main-headings no-print">Resume Builder</h1>
@@ -18,6 +16,7 @@
             <div class="input-container">
               <label for="first-name">First Name</label>
               <input
+                onkeyup="updateResume()"
                 class="input"
                 type="text"
                 placeholder="First Name"
@@ -29,6 +28,7 @@
             <div class="input-container">
               <label for="middle-name">Middle Name</label>
               <input
+                onkeyup="updateResume()"
                 class="input"
                 type="text"
                 placeholder="Middle Name"
@@ -39,6 +39,7 @@
             <div class="input-container">
               <label for="last-name">Last Name</label>
               <input
+                onkeyup="updateResume()"
                 class="input"
                 type="text"
                 placeholder="Last Name"
@@ -50,6 +51,7 @@
             <div class="input-container">
               <label for="email">Email</label>
               <input
+                onkeyup="updateResume()"
                 class="input"
                 type="email"
                 placeholder="Email"
@@ -61,6 +63,7 @@
             <div class="input-container">
               <label for="phone-number">Phone Number</label>
               <input
+                onkeyup="updateResume()"
                 class="input"
                 type="number"
                 placeholder="Phone Number"
@@ -88,6 +91,7 @@
             <div class="input-container">
               <label for="school">School</label>
               <input
+                onkeyup="updateResume()"
                 class="input school"
                 type="text"
                 placeholder="School Name"
@@ -98,6 +102,7 @@
             <div class="input-container">
               <label for="degree">Degree</label>
               <input
+                onkeyup="updateResume()"
                 class="input degree"
                 type="text"
                 placeholder="Degree"
@@ -108,6 +113,7 @@
             <div class="input-container">
               <label for="location">Location</label>
               <input
+                onkeyup="updateResume()"
                 class="input location-edu"
                 type="text"
                 placeholder="Location"
@@ -118,6 +124,7 @@
             <div class="input-container">
               <label for="starting-date">Start Date</label>
               <input
+                onkeyup="updateResume()"
                 class="input starting-date-edu"
                 type="date"
                 placeholder="Starting-date"
@@ -127,6 +134,7 @@
             <div class="input-container">
               <label for="ending-date">Ending Date</label>
               <input
+                onkeyup="updateResume()"
                 class="input ending-date-edu"
                 type="date"
                 placeholder="Ending Date"
@@ -136,6 +144,7 @@
             <div class="input-container">
               <label for="brief-description-education">Brief Description</label>
               <input
+                onkeyup="updateResume()"
                 type="text"
                 class="input brief-description-education"
                 placeholder="Description"
@@ -165,6 +174,7 @@
             <div class="input-container">
               <label for="title">Job Title</label>
               <input
+                onkeyup="updateResume()"
                 class="input work-title"
                 type="text"
                 placeholder="Title"
@@ -175,6 +185,7 @@
             <div class="input-container">
               <label for="organization">Company / Organization</label>
               <input
+                onkeyup="updateResume()"
                 class="input work-organization"
                 type="text"
                 placeholder="Company Name"
@@ -185,6 +196,7 @@
             <div class="input-container">
               <label for="country">Location</label>
               <input
+                onkeyup="updateResume()"
                 class="input location-work"
                 type="text"
                 placeholder="Location"
@@ -195,6 +207,7 @@
             <div class="input-container">
               <label for="starting-date">Start Date</label>
               <input
+                onkeyup="updateResume()"
                 class="input starting-date-work"
                 type="date"
                 placeholder="Starting-date"
@@ -204,6 +217,7 @@
             <div class="input-container">
               <label for="ending-date">Ending Date</label>
               <input
+                onkeyup="updateResume()"
                 class="input ending-date-work"
                 type="date"
                 placeholder="Ending Date"
@@ -213,6 +227,7 @@
             <div class="input-container">
               <label for="brief-description-work">Brief Description</label>
               <input
+                onkeyup="updateResume()"
                 type="text"
                 class="input brief-description-work"
                 placeholder="Description"
@@ -242,6 +257,7 @@
             <div class="input-container">
               <label for="skills">Skills</label>
               <input
+                onkeyup="updateResume()"
                 type="text"
                 id="skills"
                 class="input"
@@ -257,6 +273,7 @@
             <div class="input-container">
               <label for="title">Project Name</label>
               <input
+                onkeyup="updateResume()"
                 class="input project-title"
                 type="text"
                 placeholder="Title"
@@ -267,6 +284,7 @@
             <div class="input-container">
               <label for="organization">Project URL</label>
               <input
+                onkeyup="updateResume()"
                 class="input project-url"
                 type="text"
                 placeholder="Company Name"
@@ -277,6 +295,7 @@
             <div class="input-container">
               <label for="brief-description">Brief Description</label>
               <input
+                onkeyup="updateResume()"
                 class="input brief-description-project"
                 type="text"
                 placeholder="Description"
@@ -306,6 +325,7 @@
             <div class="input-container">
               <label for="languages">Language</label>
               <input
+                onkeyup="updateResume()"
                 type="text"
                 class="input"
                 id="languages"
