@@ -9,8 +9,8 @@
     <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
   </head>
   <body>
-    <h1 style="text-align: center; font-family: Poppins">Resume Builder</h1>
-    <section class="container">
+    <h1 class="main-headings no-print">Resume Builder</h1>
+    <section class="container no-print">
       <form id="resume-form">
         <div class="form-sections">
           <h2 class="headings">Personal Info</h2>
@@ -317,7 +317,7 @@
         </div>
       </form>
     </section>
-    <h1 style="text-align: center; font-family: Poppins">Preview</h1>
+    <h1 class="main-headings no-print">Preview</h1>
     <section id="preview">
       <div id="prev-grid">
         <div id="grid-sec-one">
@@ -357,7 +357,7 @@
         </div>
       </div>
     </section>
-    <button id="download-btn" onclick="DownloadResume()">Download</button>
+    <button id="download-btn" class="no-print" onclick="DownloadResume()">Download</button>
     <script src="script.js"></script>
   </body>
 </html>

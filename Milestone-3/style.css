@@ -24,6 +24,11 @@ body {
   border-radius: 10px;
 }
 
+.main-headings{
+  text-align: center; 
+  font-family: "Poppins"
+}
+
 #resume-form {
   display: flex;
   flex-direction: column;
@@ -135,7 +140,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  justify-content: space-between;
   background-color: lavender;
 }
 
@@ -224,5 +228,11 @@ body {
 @media (max-width: 768px) {
   #prev-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media print{
+  .no-print{
+    display: none;
   }
 }
